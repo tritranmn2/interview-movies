@@ -15,7 +15,7 @@ export interface MovieProps {
 const Movie: FC<MovieProps> = ({ item }) => {
     let { name, star, img, link } = item;
     return (
-        <li className="movie  w-1/5 px-2 my-2">
+        <li className="movie w-1/5 px-2 my-2">
             <a href={link} className="relative">
                 <img src={img} alt="default_img" className="movie_img w-full rounded-xl" />
                 <div className="movie_name absolute bottom-2 left-2 font-light line-clamp-2 overflow-hidden whitespace-normal">

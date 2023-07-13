@@ -9,7 +9,7 @@ export const Button: FC<ButtonProps> = ({ children }) => {
 
 const HomeSpoitlight: FC = () => {
     return (
-        <div className="h-72 relative" id="Home">
+        <div className="h-72 relative " id="Home">
             <img
                 src="https://alkony.enerla.net/images/film/Moonfall-2022-1.jpg"
                 alt="image Default"
