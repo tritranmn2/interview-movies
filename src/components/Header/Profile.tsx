@@ -1,5 +1,5 @@
 import { BiBell, BiBox } from 'react-icons/bi';
-import avt from './goku.png';
+import avt from '../../assets/img/avt_profile_default.png';
 export interface ProfileItem {
     lable: String;
     icon: JSX.Element;

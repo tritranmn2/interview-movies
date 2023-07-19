@@ -1,24 +1,28 @@
+import { kebabCase } from 'lodash';
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
-export interface Item {
+export interface NavItemType {
     lable: string;
     icon: JSX.Element;
-    active?: boolean;
 }
 
 export interface NavItemProps {
-    item: Item;
+    item: NavItemType;
+    isActive: boolean;
     onClick: () => void;
 }
 
-const NavItem: FC<NavItemProps> = ({ item, onClick }) => {
-    const { lable, icon, active } = item;
+const NavItem: FC<NavItemProps> = ({ item, isActive, onClick }) => {
+    const { lable, icon } = item;
+    const homeHashtag = kebabCase(lable);
+
     return (
-        <li onClick={onClick}>
+        <li className="nav-item" onClick={onClick}>
             <a
-                href={`#${lable}`}
+                href={`/#${homeHashtag}`}
                 className={`flex justify-start items-center pl-12 font-semibold h-20 text-xl cursor-pointer ${
-                    active ? 'bg-primary text-white' : 'text-grey-white'
+                    isActive ? 'bg-primary text-white' : 'text-grey-white'
                 }`}
             >
                 {icon}
